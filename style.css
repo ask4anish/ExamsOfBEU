@@ -1,0 +1,276 @@
+/*college grid box*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*background color*/
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #d8f3dc, #ffffff);
+  color: #333;
+  padding: 10px;
+}
+/*top bar of website containing exams of beu*/
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+/*color of exams of beu*/
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+}
+.logo .blue { color: #1d4ed8; }
+.logo .orange { color: #f59e0b; }
+.logo .dark { color: #1f2937; }
+
+/*tag line of website*/
+.tagline {
+  text-align: center;
+  margin: 5px 0 15px;
+  font-size: 14px;
+  color: #444;
+}
+/*box containing colleges information*/
+.stats-box {
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+/*box division*/
+.stats-box div {
+  text-align: center;
+  font-size: 14px;
+}
+/*govt pvt institutes*/
+.stats-box .change {
+  font-size: 12px;
+  color: green;
+}
+/*box divider*/
+.stats-box .divider {
+  width: 2px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+/* Button row container */
+.button-row {
+  display: flex;
+  justify-content: center; /* "centre" was misspelled - should be "center" */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+/* Button styling */
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none; /* Moved from .button-row to here */
+  display: inline-block; /* Ensures proper padding and click area */
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s; /* Optional: for hover effects */
+}
+/* Button color variations */
+.btn.pink { 
+  background: linear-gradient(to right, #ff66cc, #cc66ff); 
+}
+.btn.blue { 
+  background-color: #3b82f6; 
+}
+
+/* hover effects */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* College grid container */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 20px;
+}
+
+/* College grid box */
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  cursor: pointer; /* Indicates clickable items */
+}
+/* Hover effects for the card */
+.feature-card:hover {
+  transform: translateY(-5px); /* Lift the card slightly */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1); /* Deeper shadow on hover */
+  background: #f8f9fa; /* Optional: Light background change */
+}
+
+/* Image inside the card */
+.feature-card img {
+  width: 52px;
+  height: 46px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease; /* Smooth image scaling */
+}
+/* hover for college logo */
+.feature-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Notification badge */
+.feature-card .badge {
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  animation: pulse 1.5s infinite; /* Optional: Pulsing animation */
+}
+/* hover for college grid box */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/*footer of website*/
+.footer {
+  background: #0f112a;
+  color: white;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 30px;
+}
+
+.footer-logo {
+  flex: 1;
+  min-width: 250px;
+}
+.footer-logo img {
+  width: 60px;
+  vertical-align: middle;
+}
+.footer-logo h2 {
+  margin: 10px 0 0;
+  font-size: 22px;
+  color: #1f2d5a;
+}
+
+.footer-links,
+.footer-social {
+  flex: 1;
+  min-width: 200px;
+  margin-top: 20px;
+}
+.footer-links h4,
+.footer-social h4 {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li,
+.footer-social li {
+  margin: 8px 0;
+}
+.footer-links a,
+.footer-social a {
+  text-decoration: none;
+  color: white;
+}
+.footer-social i {
+  margin-right: 8px;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+}
+.footer-bottom a {
+  color: #62a0ea;
+  text-decoration: none;
+}
+.social-icons i {
+  margin: 0 8px;
+  font-size: 16px;
+  color: white;
+}
+/* Animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  animation: fadeInUp 1s ease-in-out;
+}
+/* Hover effect on links */
+.footer-links a:hover,
+.footer-social a:hover,
+.footer-bottom a:hover {
+  color: #62a0ea;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on social icons */
+.social-icons i:hover {
+  transform: scale(1.2);
+  color: #62a0ea;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+/* Zoom effect on logo */
+.footer-logo img {
+  transition: transform 0.3s ease;
+}
+.footer-logo img:hover {
+  transform: scale(1.1);
+}
+.footer-links a:hover,
+.footer-social a:hover,
+.footer-bottom a:hover {
+  color: #62a0ea;
+  transition: color 0.3s ease;
+}
+.social-icons i:hover {
+  transform: scale(1.2);
+  color: #62a0ea;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-logo img {
+  transition: transform 0.3s ease;
+}
+.footer-logo img:hover {
+  transform: scale(1.1);
+}
